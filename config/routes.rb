@@ -1,4 +1,5 @@
 Recruit::Application.routes.draw do
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   get "general_pages/index"
   get "general_pages/how_it_works"
   get "general_pages/contact_us"

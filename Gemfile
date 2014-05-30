@@ -41,6 +41,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'faker'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-linkedin'
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
