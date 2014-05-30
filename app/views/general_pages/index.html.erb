@@ -1,3 +1,8 @@
 <div class="jumbotron">
   <h1>Grape Vine</h1>
   <p>Find Your Friends Jobs, Get Paid, It's that Easy</p>
+  <p>
+    <%= link_to "Recruiters Sign In With Linkedin", user_omniauth_authorize_path(:linkedin), class: 'btn btn-primary' %> or
+    <%= link_to "Companies Sign Up Here", new_user_registration_path, class: 'btn btn-primary' %> Today!
+  </p>
+</div>

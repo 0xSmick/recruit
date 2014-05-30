@@ -8,19 +8,20 @@
 </head>
 <body>
   <% if user_signed_in? %>
-Signed in as <%= current_user.email %> <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+Signed in as <%= current_user %> <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
 <% else %>
-<%= link_to "Sign up", new_user_registration_path %> or
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign in with LinkedIn", user_omniauth_authorize_path(:linkedin) %>
-<% end %>
+<div class="pull-right user-info">
+  <%#= link_to "Companies Sign up Here", new_user_registration_path %>
+  <%= link_to "Companies Sign in", new_user_session_path %> or
+  <%= link_to "Recruiters Sign in", user_omniauth_authorize_path(:linkedin) %>
+</div>
+  <% end %>
 
   <div class="container">
     <ul class="nav nav-tabs">
-    <ul>
       <li><%= link_to "Home", general_pages_index_path %></li>
       <li><%= link_to "How It Works", general_pages_how_it_works_path %></li>
-      <%#= link_to "Contact Us", general_pages_contact_us %>
+      <li><%= link_to "Contact Us", general_pages_contact_us_path %></li>
     </ul>
 
         <% if flash[:notice] %>
