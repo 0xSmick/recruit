@@ -1,4 +1,9 @@
 Recruit::Application.routes.draw do
+  get "general_pages/index"
+  get "general_pages/how_it_works"
+  get "general_pages/contact_us"
+
+  root to: 'general_pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
